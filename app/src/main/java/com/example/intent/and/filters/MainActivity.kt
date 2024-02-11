@@ -101,8 +101,8 @@ class MainActivity : ComponentActivity() {
                 val eMailIntent = Intent(Intent.ACTION_SEND).apply {
                     type = "text/plain"
                     putExtra(Intent.EXTRA_EMAIL, arrayOf("test@test.com"))
-                    putExtra(Intent.EXTRA_SUBJECT, arrayOf("Test e-mail subject"))
-                    putExtra(Intent.EXTRA_TEXT, arrayOf("Test e-mail content"))
+                    putExtra(Intent.EXTRA_SUBJECT, "Test e-mail subject")
+                    putExtra(Intent.EXTRA_TEXT, "Test e-mail content")
                 }
                 if (eMailIntent.resolveActivity(packageManager) != null) {
                     startActivity(eMailIntent)
